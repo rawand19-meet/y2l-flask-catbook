@@ -35,13 +35,18 @@
                 <div class="card-body">
                   <h5 class="card-title">{{cat.name}}</h5>
                   <p class="card-text">Votes: 0</p>
-                  <a href="cats/{{cat.id}}" class="btn btn-primary">View details</a>
+                  <a href="cats/{{cat.id}}" class="btn btn-primary">
+
+                  View details</a>
                 </div>
               </div>
         </div>
       </div>
       {% endfor%}
-    </div>
+    </div class = "row">
+      <div class = "col-4">
+        <a class ="botton"href ={{url_for("why_cats")}}>add cat</a>
+      </div>
   
   <!--BOOTSTRAP Javascript import-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
