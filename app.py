@@ -12,14 +12,19 @@ def catbook_home():
 		cats = get_all_cats()
 	else:
 		name = request.form["firstname"]
-		cat = create_cat(name)
+		# cat = create_cat(name)
 		cats = get_all_cats()
 	return render_template("home.html", cats=cats)
 
 @app.route('/cats/<int:id>')
 def catbook_name(id):
- cat = get_cat(id)
- return render_template("cat.html", cat= cat)
+	cat = get_cat(id)
+	return render_template("cat.html", cat= cat)
+
+# @app.route('/cats/<int:id>/vote')
+
+# 	return render_template("database.py", cat= cat)
+
 
 
 
