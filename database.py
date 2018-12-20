@@ -19,7 +19,28 @@ def get_all_cats():
     return cats
 
 def get_cat(id):
+	 if request.method == 'GET':
+        return render_template('form.html')
+    else:
+        name = request.form['firstname']
+        animal = request.form['animal']
+
+
+        save_to_database(name, animal)        
+        return render_template('response.html',
+            n = name,
+            a = animal)
+
 
 	cat = session.query(Cat).filter_by(id=id).first()
 	return cat
 
+def add_vote(id)
+ if request.method == 'GET':
+        return ''
+    else:
+        return 'You just made a POST request!'
+
+
+
+create_cat("JO","https://data.whicdn.com/images/51239572/original.jpg",1000)
